@@ -11,7 +11,7 @@ PerfomCheck requires the following dependencies:
 - termcolor
 - tqdm
 You can install the required dependencies using the following command:
-`pip install requests matplotlib termcolor tqdm`
+```pip install requests matplotlib termcolor tqdm```
 
 ## How to Use
 1. Clone or download the PerfomCheck repository.
