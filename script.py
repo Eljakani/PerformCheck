@@ -71,7 +71,7 @@ def main():
     print(f"Requêtes réussies (code de statut 200 ou 302) : {success_requests}")
     print(f"Requêtes en erreur : {error_requests}")
 
-    print(colored('\nGeneration du graphique...', 'blue', attrs=['bold']))
+    print(colored('\nGénération du graphique...', 'blue', attrs=['bold']))
     fig, ax = plt.subplots()
     response_times = [rt if rt != 'Error' else 0 for rt in results]
     bar_colors = ['green' if rt != 'Error' else 'red' for rt in results]
@@ -79,7 +79,9 @@ def main():
     ax.set_xlabel('Numéro de requête')
     ax.set_ylabel('Temps de réponse (secondes)')
     ax.set_title('Temps de réponse des requêtes HTTP')
-    plt.show('Statistiques')
+    plt.show()
+    print(colored('Statistiques', 'blue', attrs=['bold']))
+
 
     export_path = input(colored("Chemin d'exportation du fichier JSON : ", 'blue', attrs=['bold']))
     data = {
